@@ -1,0 +1,45 @@
+# ~/.config/mako/config
+
+# Appearance
+font=JetBrainsMono Nerd Font 10
+background-color=#4f0074b3
+text-color=#e6e6e6
+border-color=#910087cc
+border-size=2
+border-radius=10
+padding=15
+margin=10
+
+# Behavior
+max-visible=5
+sort=-time
+layer=overlay
+default-timeout=8000
+ignore-timeout=0
+
+# Position
+anchor=top-right
+width=350
+height=150
+
+# Icons
+icons=1
+max-icon-size=48
+icon-path=/usr/share/icons/Papirus-Dark
+
+# Progress bar
+progress-color=#a752df
+
+# Urgency levels
+[urgency=low]
+border-color=#910087
+background-color=#4f007499
+
+[urgency=normal]
+border-color=#910087
+background-color=#4f0074b3
+
+[urgency=critical]
+border-color=#ff0066
+background-color=#910087cc
+default-timeout=0

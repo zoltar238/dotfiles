@@ -1,0 +1,10 @@
+# Ignore all files
+/*/
+/*
+
+
+# Exlcude speficic files
+!/hypr
+!/nvim
+!/mako
+!/waybar

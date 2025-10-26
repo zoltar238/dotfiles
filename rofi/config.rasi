@@ -27,7 +27,6 @@ configuration {
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
-/*	hover-select: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
@@ -136,6 +135,9 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
+  hover-select: true;
+  me-select-entry: "";
+  me-accept-entry: "MousePrimary";
   timeout {
       action: "kb-cancel";
       delay:  0;
@@ -145,6 +147,5 @@ configuration {
       sorting-method:    "name";
   }
 }
-//@theme "/home/andrei/.local/share/rofi/themes/rounded-nord-dark.rasi"
-//@theme "/home/andrei/.local/share/rofi/themes/rounded-common.rasi"
-@theme "/home/andrei/.local/share/rofi/themes/rounded-nord-dark.rasi"
+
+@theme "/home/andrei/.config/rofi/themes/rounded-nord-dark.rasi"

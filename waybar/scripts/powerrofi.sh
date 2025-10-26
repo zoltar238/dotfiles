@@ -1,5 +1,5 @@
 exit_message="󰌑 Exit Menu"
-logout_message="󰗽 Logout"
+logout_message="󰗽 Suspend"
 reboot_message=" Reboot"
 shutdown_message="⏻ Shutdown"
 
@@ -11,8 +11,8 @@ shutdown_message="⏻ Shutdown"
 
 if [ x"$@" = x"$logout_message" ]
 then
-    hyprlock || exit 0
-    
+    systemctl suspend
+    exit 0
 fi
 
 

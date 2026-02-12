@@ -1,20 +1,18 @@
 {
   "name": "bar0",
-
   "layer": "top",
   "position": "top",
-
   "height": 42,
-
   "margin-top": 10,
   "margin-left": 18,
   "margin-right": 18,
   "margin-bottom": 0,
   "spacing": 3,
-  "output": ["DP-1", "DP-2"],
-
+  "output": [
+    "DP-1",
+    "DP-2"
+  ],
   "reload_style_on_change": true,
-
   "modules-left": [
     "hyprland/workspaces",
     "wlr/taskbar",
@@ -41,9 +39,9 @@
     "custom/lineseperator",
     "network",
     "custom/buttonspace",
-    "image#powermenu"
+    "custom/powermenu"
+    //    "image#powermenu"
   ],
-
   "wlr/taskbar": {
     "tooltip": true,
     "on-click": "activate",
@@ -64,15 +62,18 @@
     "format": "🥀",
     "tooltip-format": "CUTE!!!"
   },
-
   "custom/dotseperator": {
     "format": "•"
   },
-
   "custom/lineseperator": {
     "format": "|"
   },
-
+  "custom/powermenu": {
+    "tooltip": true,
+    "tooltip-format": "Power Menu",
+    "format": "⏻",
+    "on-click": "rofi -show powermenu -modes \"powermenu:~/.config/waybar/scripts/powerrofi.sh\""
+  },
   "image#powermenu": {
     "tooltip": true,
     "tooltip-format": "Power Menu",
@@ -80,40 +81,33 @@
     "size": 16,
     "on-click": "rofi -show powermenu -modes \"powermenu:~/.config/waybar/scripts/powerrofi.sh\""
   },
-
   "custom/lights": {
     "tooltip": true,
     "tooltip-format": "Light Control",
     "format": "󰌵",
     "on-click": "rofi -modes mymenu:\"python /home/andrei/.config/waybar/scripts/hue.py\" -show mymenu -show-icons"
   },
-
   "custom/space": {
     "tooltip": false,
     "format": " "
   },
-
   "custom/buttonspace": {
     "tooltip": false,
     "format": "‎"
   },
-
   "custom/smallspace": {
     "tooltip": false,
     "format": " "
   },
-
   "tray": {
     "icon-size": 18,
     "spacing": 10
   },
-
   "clock#date": {
     "tooltip": true,
     "format": "{:%a, %b %d}",
     "tooltip-format": "{:%A, %B %d, %Y}"
   },
-
   "clock#time": {
     "interval": 1,
     "format": "{:%I:%M%p}",
@@ -138,7 +132,6 @@
       "on-scroll-down": "shift_down"
     }
   },
-
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -146,14 +139,12 @@
       "deactivated": "󰾫 "
     }
   },
-
   "backlight": {
     "interval": 2,
     "format": "󰖨 {percent}%",
     "on-scroll-up": "brightnessctl set +1%",
     "on-scroll-down": "brightnessctl set 1%-"
   },
-
   "wireplumber": {
     "format": "{icon} {volume}%",
     "tooltip-format": "Volume: {volume}%",
@@ -164,15 +155,28 @@
     "on-click": "pactl set-sink-mute $(pactl get-default-sink) toggle",
     "on-click-right": "~/.config/waybar/scripts/changeAudioOutput.sh",
     "format-icons": {
-      "analog": ["󰋋", "󰋋", "󰋋"],
-      "default": ["󰕿", "󰖀", "󰕾"]
+      "analog": [
+        "󰋋",
+        "󰋋",
+        "󰋋"
+      ],
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
     }
   },
-
   "network": {
     "interface": "enp6s0",
     "interval": 2,
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
     "format": "Error",
     "tooltip-format": "Error",
     "format-wifi": "{icon}",
@@ -182,22 +186,31 @@
     "format-disconnected": "󰈂",
     "tooltip-format-disconnected": "  Disconnected"
   },
-
   "battery": {
     "interval": 10,
     "format": "{icon}{capacity}%",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
     "tooltip": true,
     "tooltip-format": "{timeTo} ({capacity}%)\n\nCycles : {cycles}\nPower  : {power}W\nHealth : {health}%"
   },
-
   "disk": {
     "interval": 15,
     "format": "󰋊 {percentage_used}%",
     "tooltip-format": "Used: {used} / {total} ({percentage_used}%)\nFree: {free}\nPath: {path}",
     "path": "/"
   },
-
   "memory": {
     "interval": 5,
     "format": "󰍛 {percentage}%",
@@ -207,9 +220,6 @@
       "critical": 90
     }
   },
-
-
-
   "cpu": {
     "interval": 5,
     "format": "󰻠 {usage}%",
@@ -219,7 +229,6 @@
       "critical": 90
     }
   },
-
   "temperature": {
     "interval": 5,
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
@@ -232,7 +241,6 @@
       "critical": 80
     }
   },
-
   "custom/media": {
     "format": "{icon} {text} ",
     "escape": true,
@@ -245,15 +253,26 @@
     "on-scroll-down": "playerctl previous",
     "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
   },
-
   "hyprland/workspaces": {
     "show-special": true,
     "sort-by-name": true,
     "sort-by-coordinates": false,
     "persistent-workspaces": {
-    "DP-1": [1, 2, 3, 4, 5],
-    "DP-2": [6, 7, 8, 9, 10]
-  },
+      "DP-1": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "DP-2": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
     "format": " {icon} ",
     "format-icons": {
       "1": "",

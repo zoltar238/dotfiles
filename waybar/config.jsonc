@@ -25,6 +25,9 @@
     "custom/seperator",
     "custom/buttonspace",
     "clock#time",
+    "custom/buttonspace",
+    "hyprland/language",
+    "hyprland/windowcount",
     "custom/buttonspace"
   ],
   "modules-right": [
@@ -40,8 +43,13 @@
     "network",
     "custom/buttonspace",
     "custom/powermenu"
-    //    "image#powermenu"
   ],
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "US",
+    "format-es": "ES",
+    "on-click": "hyprctl switchxkblayout telink-wireless-gaming-keyboard next"
+  },
   "wlr/taskbar": {
     "tooltip": true,
     "on-click": "activate",
@@ -273,6 +281,9 @@
         10
       ]
     },
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e+1\"})'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e-1\"})'",
+//    "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"{e}\" })'",
     "format": " {icon} ",
     "format-icons": {
       "1": "",
@@ -287,10 +298,18 @@
   },
   "hyprland/window": {
     "icon": true,
+    "separate-outputs": true,
     "max-length": 80,
     "icon-size": 20,
     "rewrite": {
       "": "🪷hyprland🪷"
     }
-  }
+  },
+  "hyprland/windowcount": {
+    "format": "[{}]",
+    "format-empty": "[X]",
+    "format-windowed": "[T]",
+    // "format-fullscreen": "[{}]",
+    "separate-outputs": true
+}
 }

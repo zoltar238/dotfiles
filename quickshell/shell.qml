@@ -1,19 +1,16 @@
-import Quickshell // for PanelWindow
-import QtQuick // for Text
+// pragma ComponentBehavior: Bound
 
-PanelWindow {
-  anchors {
-    top: true
-    left: true
-    right: true
-  }
+import "bar"
 
-  implicitHeight: 30
+import Quickshell
+import Quickshell.Io
+import Quickshell.Wayland
+import Quickshell.Hyprland
+import QtQuick
+import QtQuick.Layouts
 
-  Text {
-    // center the bar in its parent component (the window)
-    anchors.centerIn: parent
+ShellRoot {
+    settings.watchFiles: true
 
-    text: "hello world"
-  }
+    Bar {}
 }

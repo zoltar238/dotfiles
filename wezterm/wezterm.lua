@@ -11,7 +11,7 @@ config.initial_rows = 28
 
 config.max_fps = 144
 
-local full_config = mytable.merge_all(require("theme"), config, {})
+local full_config = mytable.merge_all(require("theme"), require("tabs"), require("keys"), config, {})
 
 -- Finally, return the configuration to wezterm:
 return full_config

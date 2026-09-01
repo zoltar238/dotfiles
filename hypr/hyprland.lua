@@ -26,7 +26,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("sudo paccache -rk1")
 	-- Launch my most used apps
 	hl.exec_cmd(programs.fileManager, { workspace = "8", no_initial_focus = true, monitor = "DP-2" })
-	hl.exec_cmd(programs.pycharm, { workspace = "6", no_initial_focus = true, monitor = "DP-1" })
+	hl.exec_cmd(programs.terminal, { workspace = "1", no_initial_focus = true, monitor = "DP-1" })
 	hl.exec_cmd(programs.browser, { workspace = "6", no_initial_focus = true, monitor = "DP-2" })
 	hl.exec_cmd(programs.whatsapp, { workspace = "9", no_initial_focus = true, monitor = "DP-2" })
 	hl.exec_cmd(programs.flameshot, { workspace = "9", no_initial_focus = true, monitor = "DP-2" })
